@@ -1,0 +1,10 @@
+/* ... More styles above ... */
+
+@media print{
+    .doNotPrint{display:none;}
+    #Header, #Footer {display:none;}
+}
+
+@media screen{
+	.doNotShow{display:none}
+}

@@ -1,0 +1,25 @@
+<!-- More code above -->
+<div class="modal-body">
+    <div class="form-group">
+        <input type="checkbox" class="check" name="complicacion" id="field_complicacion" [(ngModel)]="capacidadFisica.complicacion" />
+        <label class="form-control-label" jhiTranslate="oncosupApp.capacidadFisica.complicacion" for="field_complicacion">Complicacion</label>
+    </div>
+    <div class="form-group" *ngIf="capacidadFisica.complicacion">
+        <label class="form-control-label" jhiTranslate="oncosupApp.capacidadFisica.desComplicacion" for="field_desComplicacion">Des Complicacion</label> <input type="text" class="form-control" name="desComplicacion" id="field_desComplicacion" [(ngModel)]="capacidadFisica.desComplicacion" />
+    </div>
+    <div class="form-group" *ngIf="capacidadFisica.complicacion">
+        <label class="form-control-label" jhiTranslate="oncosupApp.capacidadFisica.fechaInicioComplicacion" for="field_fechaInicioComplicacion">Fecha Inicio
+				Complicacion</label>
+        <div class="input-group">
+            <input id="field_fechaInicioComplicacion" type="text" class="form-control" name="fechaInicioComplicacion" ngbDatepicker #fechaInicioComplicacionDp="ngbDatepicker" [(ngModel)]="capacidadFisica.fechaInicioComplicacion" [minDate]="minDate" required /> <span class="input-group-append">
+					<button type="button" class="btn btn-secondary"
+						(click)="fechaInicioComplicacionDp.toggle()">
+						<i class="fa fa-calendar"></i>
+					</button>
+				</span>
+        </div>
+    </div>
+</div>
+<hr *ngIf="capacidadFisica.complicacion">
+
+    <!-- More code below-->

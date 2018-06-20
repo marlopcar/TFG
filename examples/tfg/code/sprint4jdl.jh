@@ -1,0 +1,28 @@
+// ... More code above ... //
+
+entity Cardio {
+	fechaUltimaRevision LocalDate required, 
+	complicacion Boolean required, 
+	desComplicacion String,
+	tratamiento Boolean required, 	
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+// ... More code between... //
+relationship OneToOne {
+	// ... More code between ... //
+	Consulta{cardio} to Cardio, 
+	// ... //
+	Consulta{neurologico} to Neurologico
+}
+
+// ... More code between... //
+
+relationship OneToMany {
+	// ... More code between ... //
+	Consulta{pruebaAportada} to PruebaAportada{consulta}, 
+	Consulta{pruebaSolicitada} to PruebaSolicitada{consulta}
+}
+
+// ... More code below ... //

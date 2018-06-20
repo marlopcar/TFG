@@ -1,0 +1,8 @@
+<!-- More code above -->
+
+<button *ngIf="!paciente.diagnosticoId" class="btn btn-primary btn-sm jh-create-entity create-diagnostico" [routerLink]="['/', { outlets: { popup: 'diagnostico-new/'+ paciente.id} }]">
+	<span class="fa fa-plus"></span>
+	<span class="hidden-sm-down" jhiTranslate="oncosupApp.diagnostico.home.createLabel">Create new Diagnostico</span>
+</button>
+
+<!-- More code below -->

@@ -1,0 +1,15 @@
+// ... More code above ... //
+
+	open(component: Component, pacienteId: number, id?: number | any): Promise<NgbModalRef> {
+	
+	// ... More code between ... //
+	
+		setTimeout(() => {
+			// this.ngbModalRef = this.diagnosticoModalRef(component, new Diagnostico());
+			const diagnostico: Diagnostico = new Diagnostico();
+			diagnostico.pacienteId = pacienteId;
+			this.ngbModalRef = this.diagnosticoModalRef(component, diagnostico);
+			resolve(this.ngbModalRef);
+		}, 0);
+	
+// ... More code below ... //

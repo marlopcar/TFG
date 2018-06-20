@@ -1,0 +1,1051 @@
+entity Paciente {
+	nombre String required, 
+	apellidos String required, 
+	fechaNacimiento LocalDate required, 
+	sexo Sexo required, 
+	nhc String maxlength(38) pattern(/[0-9]+/), 
+	nss String maxlength(20), 
+	tarjetaSanitaria String maxlength(20), 
+	cipa String maxlength(20), 
+	telefono String, 
+	email String, 
+	annoDiagnostico String maxlength(4)
+}
+
+enum Sexo {
+    VARON, MUJER
+}
+
+entity Nacionalidad {
+	nombre String required
+}
+
+entity Etnia {
+	nombre String required
+}
+
+entity Hospital {
+    nombre String required
+}
+
+entity ComunidadAutonoma {
+    nombre String required
+}
+
+entity ProvinciaPais {
+    nombre String required
+}
+
+entity Diagnostico {
+	fechaDiagnostico LocalDate required, 
+	patologiaOncologica PatologiaOncologica required, 
+	diagnosticoEspecifico String, 
+	estadioLeucemia EstadioLeucemia, 
+	estadioTumorSolido EstadioTumorSolido, 
+	estadioOtros String, 
+	localizacion String, 
+	recaida Boolean required
+}
+
+enum PatologiaOncologica {
+    LEUCEMIA, TUMOR_SOLIDO, OTROS
+}
+
+enum EstadioLeucemia {
+    SIN_AFECTACION_AL_SISTEMA_NERVIOSO_CENTRAL, CON_AFECTACION_AL_SISTEMA_NERVIOSO_CENTRAL
+}
+
+enum EstadioTumorSolido {
+    LOCALIZADO, METASTASICO
+}
+
+entity Cie10 {
+	codigo String required, 
+    nombre String required
+}
+
+entity Cie10Secundario {
+	codigo String required, 
+    nombre String required
+}
+
+entity Recaida {
+	fechaRecaida LocalDate required, 
+	patologiaOncologica PatologiaOncologica required, 
+	tiempoLeucemia TiempoLeucemia, 
+	localizacionLeucemia LocalizacionLeucemia, 
+	localizacionTumorSolido LocalizacionTumorSolido
+}
+
+enum TiempoLeucemia {
+    TARDIA, PRECOZ
+}
+
+enum LocalizacionLeucemia {
+    MEDULAR, EXTRAMEDULAR, COMBINADA
+}
+
+enum LocalizacionTumorSolido {
+    LOCAL, METASTASICO
+}
+
+entity Protocolo {
+	identificador String required, 
+	nombre String required, 
+	fechaInicio LocalDate required, 
+	fechaFin LocalDate required
+}
+
+entity Rama {
+	identificador String required, 
+	nombre String required
+}
+
+entity TratamientoRecomendado {
+	identificador String required, 
+	quimioterapia Boolean required, 
+	radioterapia Boolean required, 
+	cirugia Boolean required, 
+	trasplante Boolean required, 
+	otrosTratamientos Boolean required
+}
+
+entity FarmacoAsociado {
+	dosis String required
+}
+
+entity Farmaco {
+	nombre String required, 
+	unidad Unidad required, 
+	nombreOtraUnidad String, 
+	viaAdministracion ViaAdministracion required
+}
+
+enum Unidad {
+    MG_M2, MG_KG, UL_M2, OTRA_UNIDAD
+}
+
+enum ViaAdministracion {
+    INTRAMUSCULAR, INTRATECAL, INTRAVENOSA, ORAL, SUBCUTANEO
+}
+
+entity Tratamiento {
+	protocoloEstandarizado Boolean required, 
+	fechaInicio LocalDate required, 
+	fechaFin LocalDate required, 
+	recQuimioterapia Boolean required, 
+	recRadioterapia Boolean required, 
+	recCirugia Boolean required, 
+	recTrasplante Boolean required, 
+	recOtrosTratamientos Boolean required, 
+	complicaciones Boolean required, 
+	complicacion String, 
+	dispositivos TextBlob
+}
+
+entity Quimioterapia {
+	lugarAdministracion String, 
+	fechaInicio LocalDate required, 
+	fechaFin LocalDate required
+}
+
+entity FarmacoQuimio {
+	dosis String required
+}
+
+entity Radioterapia {
+	lugarTratamiento String, 
+	fechaInicio LocalDate required, 
+	fechaFin LocalDate required, 
+	modalidadTratamiento ModalidadTratamiento, 
+	localizacion String, 
+	craneoespinal Boolean, 
+	dosisTotal String, 
+	fraccionado Boolean, 
+	boost Boolean, 
+	organosRiesgo String
+}
+
+enum ModalidadTratamiento {
+    FOTONES, PROTONES
+}
+
+entity Cirugia {
+	fechaCirugia LocalDate, 
+	lugar String, 
+	tipoIntervencion String, 
+	amputacion Boolean, 
+	protesis Boolean
+}
+
+entity Trasplante {
+	fechaTrasplante LocalDate, 
+	segundoTrasplante Boolean, 
+	motivoSegundoTrasplante MotivoSegundoTrasplante, 
+	motivosSegundoTrasplante String, 
+	statusPrevioLeucemia StatusPrevioLeucemia, 
+	statusPrevioTumor StatusPrevioTumor, 
+	tipoTrasplante TipoTrasplante, 
+	tipoDonante TipoDonante, 
+	tipoAcondicionamiento TipoAcondicionamiento, 
+	usoRadioterapia Boolean, 
+	eichAgudo Boolean, 
+	eichAgudoGrado GradoEich, 
+	eichAgudoResuelto Boolean, 
+	eichCronico Boolean, 
+	eichCronicoGrado GradoEich, 
+	eichCronicoResuelto Boolean, 
+	enfermedadVenoclusiva Boolean, 
+	microangiopatiaTrombotica Boolean, 
+	infecciones Boolean, 
+	otrasComplicaciones String
+}
+
+enum StatusPrevioLeucemia {
+    PRIMERA_REMISION_COMPLETA, SEGUNDA_REMISION_COMPLETA, TERCERA_REMISION_COMPLETA_O_MAS, NO_REMISION_COMPLETA_O_PROGRESION
+}
+
+enum StatusPrevioTumor {
+    REMISION_COMPLETA, REMISION_PARCIAL, PROGRESION
+}
+
+enum TipoTrasplante {
+    AUTOLOGO, ALOGENICO
+}
+
+enum TipoDonante {
+    EMPARENTADO_HLA_IDENTICO, EMPARENTADO_HLA_NO_IDENTICO, NO_EMPARENTADO_HLA_IDENTICO, NO_EMPARENTADO_HLA_NO_IDENTICO
+}
+
+enum TipoAcondicionamiento {
+    MIELOABLATIVO, INTENSIDAD_REDUCIDA
+}
+
+enum GradoEich {
+    UNO, DOS, TRES, CUATRO
+}
+
+enum MotivoSegundoTrasplante {
+    RECAIDA, FALLO_INJERTO, OTROS
+}
+
+entity FarmacoTrasplante {
+	dosis String required
+}
+
+entity FarmacoInmunosupresor {
+	dosis String required, 
+	tiempo String
+}
+
+entity OtroTratamiento {
+	inmunoterapia Boolean, 
+	inmunoterapiaFecha LocalDate, 
+	inmunoterapiaDesc String, 
+	tratamiento131Mibg Boolean, 
+	tratamiento131MibgFecha LocalDate, 
+	ablacionTiroideaI131 Boolean, 
+	ablacionTiroideaI131Fecha LocalDate, 
+	otrosTratamientos String, 
+	otrosTratamientosFecha LocalDate
+}
+
+entity Consulta {
+	fechaConsulta LocalDate required, 
+	edad String maxlength(3), 
+	exitus Boolean required, 
+	seguimientoHabitual Boolean required, 
+	tratamientoHabitual Boolean required, 
+	isCardio Boolean required, 
+	isNeumo Boolean required, 
+	isEndocrinoCrecimiento Boolean required, 
+	isEndocrinoPeso Boolean required, 
+	isEndocrinoDiabetes Boolean required, 
+	isEndocrinoTiroides Boolean required, 
+	isMaduracionSexual Boolean required, 
+	isNefrourologico Boolean required, 
+	isDigestivo Boolean required, 
+	isHigado Boolean required, 
+	isPiel Boolean required, 
+	isORL Boolean required, 
+	isDientesBoca Boolean required, 
+	isOjos Boolean required, 
+	isHematologico Boolean required, 
+	isVacunas Boolean required, 
+	isAutoinmunidad Boolean required, 
+	isNeurologico Boolean required, 
+	isNeuropsicologico Boolean required, 
+	isMuscular Boolean required, 
+	isEsqueletico Boolean required, 
+	isCapacidadFisica Boolean required, 
+	isSexualidad Boolean required, 
+	isFertilidad Boolean required, 
+	isPsicologico Boolean required, 
+	isSocial Boolean required, 
+	isDrogas Boolean required, 
+	isInformacion Boolean required, 
+	isSegundoTumor Boolean required, 
+	observaciones TextBlob, 
+	proxRevision String
+}
+
+entity Especialidad {
+	nombreEspecialidad NombreEspecialidad required, 
+	motivo String, 
+	frecuencia String, 
+	centroSanitario String, 
+	fechaInicio LocalDate
+}
+
+enum NombreEspecialidad {
+    CARDIO, NEUMO, ENDOCRINO_CRECIMIENTO, ENDOCRINO_PESO, ENDOCRINO_DIABETES, ENDOCRINO_TIROIDES, MADURACION_SEXUAL, NEFROUROLOGICO, DIGESTIVO, HIGADO, PIEL, ORL, DIENTES_BOCA, 
+	OJOS, HEMATOLOGICO, VACUNAS, AUTOINMUNIDAD, NEUROLOGICO, NEUROPSICOLOGICO, MUSCULAR, ESQUELETICO, CAPACIDAD_FISICA, SEXUALIDAD, FERTILIDAD, PSICOLOGICO, SOCIAL, DROGAS
+}
+
+entity TratamientoHabitual {
+	farmaco String required, 
+	fechaInicio LocalDate
+}
+
+entity Constante {
+    escalaActividad EscalaActividad required, 
+	temperatura String, 
+	tas String, 
+	tad String, 
+	fc String, 
+	fr String, 
+	saturacionOxigeno String, 
+	peso String, 
+	talla String, 
+	imc String, 
+	superficieCorporal String
+}
+
+enum EscalaActividad {
+    KARNOFSKY, LANSKY
+}
+
+entity EscalaKarnofsky {
+	codigo String required, 
+    nombre String required
+}
+
+entity EscalaLansky {
+	codigo String required, 
+    nombre String required
+}
+
+entity ExploracionFisica {
+	resultadoExploracion ResultadoPrueba required, 
+	observaciones String maxlength(1000), 
+	estadioTanner EstadioTanner
+}
+
+enum ResultadoPrueba {
+    NORMAL, ALTERADA
+}
+
+enum EstadioTanner {
+    I, II, III, IV, V
+}
+
+entity Cardio {
+	complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity Neumo {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity EndocrinoCrecimiento {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+	tallaMadre String, 
+	tallaPadre String, 
+	tallaDiana String, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity EndocrinoPeso {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate, 
+	dietaAdelgazar Boolean
+}
+
+entity EndocrinoDiabetes {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity EndocrinoTiroides {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity MaduracionSexual {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity Nefrourologico {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity Digestivo {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity Higado {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity Piel {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity ORL {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity DientesBoca {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity Ojos {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity Hematologico {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity Vacunas {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate, 
+	revacunacion Boolean, 
+	vacunaAnualGripe Boolean, 
+	vacunaBexero Boolean, 
+	otrasVacunas String
+}
+
+entity Autoinmunidad {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity Neurologico {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity Neuropsicologico {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity Muscular {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate
+}
+
+entity Esqueletico {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate, 
+	osteoporosis Boolean, 
+	fracturasPatologicas Boolean
+}
+
+entity CapacidadFisica {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    tratamiento Boolean, 
+    desTratamiento String, 
+    fechaInicioTratamiento LocalDate, 
+	alteracion Boolean, 
+	deporteHabitual Boolean, 
+	frecuencia Frecuencia, 
+	numeroHorasSemana String, 
+	tipoActividadFisica String maxlength(1000)
+}
+
+enum Frecuencia {
+	DIARIO, MAS_TRES_DIAS_SEMANA, MENOS_TRES_DIAS_SEMANA, ESPORADICO
+}
+
+entity Sexualidad {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    tratamiento Boolean, 
+    desTratamiento String, 
+    fechaInicioTratamiento LocalDate, 
+	pareja Boolean, 
+	relacionesSexuales Boolean, 
+	isProblemasRelaciones Boolean, 
+	problemasRelaciones String maxlength(500)
+}
+
+entity Fertilidad {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate, 
+	isTecnicasPreservacion Boolean, 
+	tecnicasPreservacion String maxlength(500), 
+	deseoHijos Boolean, 
+	preocupacion Boolean, 
+	numeroHijos String, 
+	isTecnicasReproduccion Boolean, 
+	tecnicasReproduccion String maxlength(500)
+}
+
+entity Psicologico {
+    seguimiento Boolean,
+    tipoSeguimiento TipoSeguimientoPsicologico,
+    complicacion Boolean, 
+    fechaComplicacion LocalDate, 
+    diagnostico String, 
+    fechaInicioTratamiento LocalDate, 
+    fechaFinTratamiento LocalDate, 
+    testPsicologico Boolean,
+    apoyoEmocional Long,
+    apoyoinstrumental Long,
+    interaccionSocialPos Long,
+    apoyoSocialEfectivo Long,
+    indiceGlobalApoyoSocial Long,
+    rosenberg Long,
+    sf36r Long,
+    inforEnfermedad String maxlength(500),
+    infoTestMedicos String maxlength(500),
+    InfoTratamiento String maxlength(500),
+    infoOtrosServicios String maxlength(500),
+    scoreGlobal String
+}
+
+enum TipoSeguimientoPsicologico {
+    PSICOLOGO, TRABAJADOR_SOCIAL, AMBOS
+}
+
+entity Social {
+    nivelEstudios NivelEstudios,
+    curso String,
+    repetirCurso Boolean,
+    repetirCursoMomento RepetirCursoMomento,
+    situacionLaboral SituacionLaboral,
+    residencia Residencia,
+    perstacionEnfermedad Boolean,
+    descPrestacionEnfermedad TextBlob
+}
+
+enum NivelEstudios {
+    PRIMARIA, SECUNDARIA, BACHILLERATO, FORMACION_PROFESIONAL, UNIVERSIDAD, POSTGRADO, SIN_ESTUDIOS
+}
+
+enum RepetirCursoMomento {
+    ANTES, DURANTE, DESPUES
+}
+
+enum SituacionLaboral {
+    ESTUDIANTE, ACTIVO, DESEMPLEADO,BAJA_LABORAL, OTROS
+}
+
+enum Residencia {
+    INDEPENDIENTE, PADRES, COMPANEROS,PAREJA, OTROS
+}
+
+entity Drogas {
+    complicacion Boolean, 
+    desComplicacion String, 
+	fechaInicioComplicacion LocalDate, 
+    seguimiento Boolean, 
+    fechaUltimaRevision LocalDate, 
+    tratamiento Boolean, 
+	desTratamiento String, 
+	fechaInicioTratamiento LocalDate, 
+	tabaco Boolean, 
+	numCigarrillosDia String, 
+	fechaInicioTabaco LocalDate, 
+	alcohol Boolean, 
+	frecuenciaAlcohol Frecuencia, 
+	numeroCopasDia String, 
+	numeroBorrachoMes String, 
+	isOtrasDrogas Boolean, 
+	otrasDrogas String maxlength(1000)
+	frecuenciaOtrasDrogas Frecuencia, 
+	isDependenciaFarmacos Boolean, 
+	dependenciaFarmacos String maxlength(1000)
+	fechaInicioFarmacos LocalDate
+}
+
+entity Informacion {
+    infoEnfermedad Info,
+    infoEfectosSecundarios Info,
+    tipoInformacion TipoInformacion,
+    consultaUtil Boolean,
+    nivelAnsiedad NivelAnsiedad
+}
+
+enum Info {
+    SI, NO, NO_RECUERDA
+}
+enum TipoInformacion {
+    TOTAL, PARCIAL
+}
+enum NivelAnsiedad {
+    UNO, DOS, TRES, CUATRO, CINCO, SEIS, SIETE, OCHO, NUEVE, DIEZ
+}
+
+entity SegundoTumor {
+    patologiaOncologica PatologiaOncologica required, 
+    diagnosticoEspecifico String, 
+    fechaDiagnostico LocalDate, 
+    tratamiento TextBlob
+}
+
+entity PruebaAportada {
+    tipoPrueba TipoPrueba required, 
+	resultadoPrueba ResultadoPrueba, 
+	observaciones String maxlength(500)
+}
+
+enum TipoPrueba {
+    ANALITICA, PRUEBA_IMAGEN, INTERCONSULTAS, OTRAS
+}
+
+entity PruebaSolicitada {
+    tipoPrueba TipoPrueba required, 
+	observaciones String maxlength(1000)
+}
+
+entity Informe {
+    fechaConsulta LocalDate required, 
+	nombreCompleto String required, 
+	fechaNacimiento LocalDate required, 
+	sexo Sexo required, 
+	nhc String maxlength(38) pattern(/[0-9]+/), 
+	diagnostico TextBlob, 
+	protocoloEstandarizado Boolean required, 
+	protocolo String, 
+	rama String, 
+	fechaInicioTratamiento LocalDate, 
+	fechaFinTratamiento LocalDate, 
+	recQuimioterapia Boolean required, 
+	recRadioterapia Boolean required, 
+	recCirugia Boolean required, 
+	recTrasplante Boolean required, 
+	recOtrosTratamientos Boolean required, 
+	complicaciones Boolean required, 
+	complicacion String, 
+	dispositivos TextBlob, 
+	quimioterapia TextBlob, 
+	radioterapia TextBlob, 
+	cirugia TextBlob, 
+	trasplantes TextBlob, 
+	otrosTratamientos TextBlob, 
+	recaida Boolean required, 
+	recaida1 TextBlob, 
+	protocoloEstandarizado1 Boolean required, 
+	protocolo1 String, 
+	rama1 String, 
+	fechaInicioTratamiento1 LocalDate, 
+	fechaFinTratamiento1 LocalDate, 
+	recQuimioterapia1 Boolean required, 
+	recRadioterapia1 Boolean required, 
+	recCirugia1 Boolean required, 
+	recTrasplante1 Boolean required, 
+	recOtrosTratamientos1 Boolean required, 
+	complicaciones1 Boolean required, 
+	complicacion1 String, 
+	dispositivos1 TextBlob, 
+	quimioterapia1 TextBlob, 
+	radioterapia1 TextBlob, 
+	cirugia1 TextBlob, 
+	trasplantes1 TextBlob, 
+	otrosTratamientos1 TextBlob, 
+	recaida2 TextBlob, 
+	protocoloEstandarizado2 Boolean required, 
+	protocolo2 String, 
+	rama2 String, 
+	fechaInicioTratamiento2 LocalDate, 
+	fechaFinTratamiento2 LocalDate, 
+	recQuimioterapia2 Boolean required, 
+	recRadioterapia2 Boolean required, 
+	recCirugia2 Boolean required, 
+	recTrasplante2 Boolean required, 
+	recOtrosTratamientos2 Boolean required, 
+	complicaciones2 Boolean required, 
+	complicacion2 String, 
+	dispositivos2 TextBlob, 
+	quimioterapia2 TextBlob, 
+	radioterapia2 TextBlob, 
+	cirugia2 TextBlob, 
+	trasplantes2 TextBlob, 
+	otrosTratamientos2 TextBlob, 
+	recaida3 TextBlob, 
+	protocoloEstandarizado3 Boolean required, 
+	protocolo3 String, 
+	rama3 String, 
+	fechaInicioTratamiento3 LocalDate, 
+	fechaFinTratamiento3 LocalDate, 
+	recQuimioterapia3 Boolean required, 
+	recRadioterapia3 Boolean required, 
+	recCirugia3 Boolean required, 
+	recTrasplante3 Boolean required, 
+	recOtrosTratamientos3 Boolean required, 
+	complicaciones3 Boolean required, 
+	complicacion3 String, 
+	dispositivos3 TextBlob, 
+	quimioterapia3 TextBlob, 
+	radioterapia3 TextBlob, 
+	cirugia3 TextBlob, 
+	trasplantes3 TextBlob, 
+	otrosTratamientos3 TextBlob, 
+	recaida4 TextBlob, 
+	protocoloEstandarizado4 Boolean required, 
+	protocolo4 String, 
+	rama4 String, 
+	fechaInicioTratamiento4 LocalDate, 
+	fechaFinTratamiento4 LocalDate, 
+	recQuimioterapia4 Boolean required, 
+	recRadioterapia4 Boolean required, 
+	recCirugia4 Boolean required, 
+	recTrasplante4 Boolean required, 
+	recOtrosTratamientos4 Boolean required, 
+	complicaciones4 Boolean required, 
+	complicacion4 String, 
+	dispositivos4 TextBlob, 
+	quimioterapia4 TextBlob, 
+	radioterapia4 TextBlob, 
+	cirugia4 TextBlob, 
+	trasplantes4 TextBlob, 
+	otrosTratamientos4 TextBlob, 
+	seguimientoHabitual Boolean required, 
+	especialidades TextBlob, 
+	tratamientoHabitual Boolean required, 
+	tratamientosHabituales TextBlob, 
+	constantes TextBlob, 
+	exploracionFisica TextBlob, 
+	isCardio Boolean required, 
+	itemCardio TextBlob, 
+	isNeumo Boolean required, 
+	itemNeumo TextBlob, 
+	isEndocrinoCrecimiento Boolean required, 
+	itemEndocrinoCrecimiento TextBlob, 
+	isEndocrinoPeso Boolean required, 
+	itemEndocrinoPeso TextBlob, 
+	isEndocrinoDiabetes Boolean required, 
+	itemEndocrinoDiabetes TextBlob, 
+	isEndocrinoTiroides Boolean required, 
+	itemEndocrinoTiroides TextBlob, 
+	isMaduracionSexual Boolean required, 
+	itemMaduracionSexual TextBlob, 
+	isNefrourologico Boolean required, 
+	itemNefrourologico TextBlob, 
+	isDigestivo Boolean required, 
+	itemDigestivo TextBlob, 
+	isHigado Boolean required, 
+	itemHigado TextBlob, 
+	isPiel Boolean required, 
+	itemPiel TextBlob, 
+	isORL Boolean required, 
+	itemORL TextBlob, 
+	isDientesBoca Boolean required, 
+	itemDientesBoca TextBlob, 
+	isOjos Boolean required, 
+	itemOjos TextBlob, 
+	isHematologico Boolean required, 
+	itemHematologico TextBlob, 
+	isVacunas Boolean required, 
+	itemVacunas TextBlob, 
+	isAutoinmunidad Boolean required, 
+	itemAutoinmunidad TextBlob, 
+	isNeurologico Boolean required, 
+	itemNeurologico TextBlob, 
+	isNeuropsicologico Boolean required, 
+	itemNeuropsicologico TextBlob, 
+	isMuscular Boolean required, 
+	itemMuscular TextBlob, 
+	isEsqueletico Boolean required, 
+	itemEsqueletico TextBlob, 
+	isCapacidadFisica Boolean required, 
+	itemCapacidadFisica TextBlob, 
+	isSexualidad Boolean required, 
+	itemSexualidad TextBlob, 
+	isFertilidad Boolean required, 
+	itemFertilidad TextBlob, 
+	isPsicologico Boolean required, 
+	itemPsicologico TextBlob, 
+	isSocial Boolean required, 
+	itemSocial TextBlob, 
+	isDrogas Boolean required, 
+	itemDrogas TextBlob, 
+	isInformacion Boolean required, 
+	itemInformacion TextBlob, 
+	isSegundoTumor Boolean required, 
+	itemSegundoTumor TextBlob, 
+	observaciones TextBlob, 
+	pruebasAportadas TextBlob, 
+	pruebasSolicitadas TextBlob, 
+	recomendaciones TextBlob, 
+	otrasRecomendaciones String maxlength(1000), 
+	proxRevision String
+}
+
+entity EfectoTardio {
+    fecha LocalDate required, 
+	tipoItem String required, 
+	subTipoItem String, 
+	complicacion String, 
+	tratamiento String, 
+	itemId Long
+}
+
+entity Recomendacion {
+	nombreRecomendacion String required, 
+	descripcion String maxlength(500)
+}
+
+entity RecomendacionConsulta {
+	otrasRecomendaciones String maxlength(1000)
+}
+
+entity ExportacionSpss {
+    fechaExportacion LocalDate required,
+    annoDiagnostico String maxlength(4),
+    sexo Sexo,
+    patologiaOncologica PatologiaOncologica,
+    quimioterapia Boolean, 
+    radioterapia Boolean, 
+    cirugia Boolean, 
+    trasplante Boolean, 
+    otrosTratamientos Boolean 
+}
+
+relationship OneToOne {
+	Paciente{diagnostico} to Diagnostico, 
+	Rama{tratamientoRecomendado} to TratamientoRecomendado, 
+	Diagnostico{tratamiento} to Tratamiento, 
+	Recaida{tratamiento} to Tratamiento, 
+	Tratamiento{quimioterapia} to Quimioterapia, 
+	Tratamiento{radioterapia} to Radioterapia, 
+	Tratamiento{otroTratamiento} to OtroTratamiento, 
+	Consulta{constante} to Constante, 
+	Consulta{exploracionFisica} to ExploracionFisica, 
+	Consulta{cardio} to Cardio, 
+	Consulta{neumo} to Neumo, 
+	Consulta{endocrinoCrecimiento} to EndocrinoCrecimiento, 
+	Consulta{endocrinoPeso} to EndocrinoPeso, 
+	Consulta{endocrinoDiabetes} to EndocrinoDiabetes, 
+	Consulta{endocrinoTiroides} to EndocrinoTiroides, 
+	Consulta{maduracionSexual} to MaduracionSexual, 
+	Consulta{nefrourologico} to Nefrourologico, 
+	Consulta{digestivo} to Digestivo, 
+	Consulta{higado} to Higado, 
+	Consulta{piel} to Piel, 
+	Consulta{orl} to ORL, 
+	Consulta{dientesBoca} to DientesBoca, 
+	Consulta{ojos} to Ojos, 
+	Consulta{hematologico} to Hematologico, 
+	Consulta{vacunas} to Vacunas, 
+	Consulta{autoinmunidad} to Autoinmunidad, 
+	Consulta{neurologico} to Neurologico, 
+	Consulta{neuropsicologico} to Neuropsicologico, 
+	Consulta{muscular} to Muscular, 
+	Consulta{esqueletico} to Esqueletico, 
+	Consulta{capacidadFisica} to CapacidadFisica, 
+	Consulta{sexualidad} to Sexualidad, 
+	Consulta{fertilidad} to Fertilidad, 
+	Consulta{psicologico} to Psicologico, 
+	Consulta{social} to Social, 
+	Consulta{drogas} to Drogas, 
+	Consulta{informacion} to Informacion, 
+	Consulta{segundoTumor} to SegundoTumor, 
+	Consulta{recomendacionConsulta} to RecomendacionConsulta{consulta}, 
+	Consulta{informe} to Informe
+}
+
+relationship OneToMany {
+	ComunidadAutonoma{provinciaPais} to ProvinciaPais{comunidadAutonoma required}, 
+	Cie10{cie10Secundario} to Cie10Secundario{cie10(codigo) required}, 
+	Nacionalidad{paciente} to Paciente{nacionalidad}, 
+	Etnia{paciente} to Paciente{etnia}, 
+	ComunidadAutonoma{pacienteDiagnostico} to Paciente{comunidadDiagnostico}, 
+	ProvinciaPais{pacienteDiagnostico} to Paciente{provinciaDiagnostico}, 
+	ComunidadAutonoma{pacienteActual} to Paciente{comunidadActual}, 
+	ProvinciaPais{pacienteActual} to Paciente{provinciaActual}, 
+	Hospital{paciente} to Paciente{hospital}, 
+	Cie10{diagnostico} to Diagnostico{cie10(codigo) required}, 
+	Cie10Secundario{diagnostico} to Diagnostico{cie10Secundario(codigo) required}, 
+	Diagnostico{recaida} to Recaida{diagnostico required}, 
+	Protocolo{rama} to Rama{protocolo(identificador) required}, 
+	TratamientoRecomendado{farmacoAsociado} to FarmacoAsociado{tratamientoRecomendado(identificador) required}, 
+	Farmaco{farmacoAsociado required} to FarmacoAsociado{farmaco(nombre) required}, 
+	Protocolo{tratamiento} to Tratamiento{protocolo}, 
+	Rama{tratamiento} to Tratamiento{rama},
+	Quimioterapia{farmacoQuimio} to FarmacoQuimio{quimioterapia required}, 
+	Farmaco{farmacoQuimio required} to FarmacoQuimio{farmaco(nombre) required}, 
+	Tratamiento{cirugia} to Cirugia{tratamiento required}, 
+	Tratamiento{trasplante} to Trasplante{tratamiento required}, 
+	Trasplante{farmacoTrasplante} to FarmacoTrasplante{trasplante required}, 
+	Farmaco{farmacoTrasplante required} to FarmacoTrasplante{farmaco(nombre) required}, 
+	Trasplante{farmacoInmunosupresor} to FarmacoInmunosupresor{trasplante required}, 
+	Farmaco{farmacoInmunosupresor required} to FarmacoInmunosupresor{farmaco(nombre) required}, 
+	Paciente{consulta} to Consulta{paciente}, 
+	Consulta{especialidad} to Especialidad{consulta}, 
+	Consulta{tratamientoHabitual} to TratamientoHabitual{consulta}, 
+	Consulta{pruebaAportada} to PruebaAportada{consulta}, 
+	Consulta{pruebaSolicitada} to PruebaSolicitada{consulta}, 
+	Paciente{efectoTardio} to EfectoTardio{paciente}, 
+	EscalaKarnofsky{constante} to Constante{escalaKarnofsky(codigo)}, 
+	EscalaLansky{constante} to Constante{escalaLansky(codigo)}
+}
+
+relationship ManyToMany {
+	RecomendacionConsulta{recomendacion(nombreRecomendacion)} to Recomendacion{recomendacionConsulta} 
+}
+
+paginate Paciente, Protocolo, Farmaco, EfectoTardio, Recomendacion with pagination
+
+dto * with mapstruct
+
+service all with serviceImpl

@@ -1,0 +1,24 @@
+.block{
+	width:100%;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: flex-start;
+	margin-bottom:15px;
+}
+.item{
+	width:25%;
+	margin-bottom:10px;
+}
+.item-titulo{
+	font-weight: bold;
+}
+.item-diagnostico{
+	width:75%;
+}
+.half-block{
+	display:flex;
+	justify-content: space-between;
+}
+.half-item{
+	width: 49.5%;
+}

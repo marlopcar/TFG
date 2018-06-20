@@ -1,0 +1,13 @@
+// ... More code above ... //
+
+ngOnInit() {
+	this.routeSub = this.route.params.subscribe((params) => {
+
+		if ( params['id'] ) {
+			this.diagnosticoPopupService.open(DiagnosticoDialogComponent as Component, params['pacienteId'], params['id']);
+		} else {
+                this.diagnosticoPopupService.open(DiagnosticoDialogComponent as Component, params['pacienteId']);
+		}
+	});
+}
+// ... More code below ... //

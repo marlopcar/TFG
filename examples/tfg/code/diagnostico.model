@@ -1,0 +1,23 @@
+// ... More code above ... //
+
+export class Diagnostico implements BaseEntity {
+	constructor(
+		public id?: number,
+		public fechaDiagnostico?: any,
+		public patologiaOncologica?: PatologiaOncologica,
+		public diagnosticoEspecifico?: string,
+		public estadioLeucemia?: EstadioLeucemia,
+		public estadioTumorSolido?: EstadioTumorSolido,
+		public estadioOtros?: string,
+		public localizacion?: string,
+		public recaida?: boolean,
+		public recaidas?: BaseEntity[],
+		public cie10Id?: number,
+		public cie10SecundarioId?: number,
+		public pacienteId?: number,
+	) {
+		this.recaida = false;
+	}
+}
+
+// ... More code below ... //
