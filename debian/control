@@ -1,0 +1,22 @@
+Source: esi-tfg
+Section: shells
+Priority: optional
+Maintainer: David Villa Alises <David.Villa@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 4.0.0
+Homepage: https://bitbucket.org/arco_group/esi-tfg
+
+Package: esi-tfg
+Architecture: all
+Depends: ${misc:Depends},
+	 arco-authors (>= 0.20151112-1),
+	 texlive-latex-extra,
+	 texlive-lang-spanish,
+	 texlive-latex-recommended,
+	 texlive-fonts-extra,
+	 cm-super
+Description: Clases LaTeX y utilidades para escribir las memorías de TFG y TFM
+ Este paquete proporciona clases LaTeX especialmente creadas para simplificar
+ la edición y  tipografiado de las memorias del TFG y TFM de acuerdo con las
+ normas de formato  especificadas por la the Escuela Superior de Informátcia
+ de Ciudad Real
