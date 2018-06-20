@@ -1,0 +1,79 @@
+\chapter{Objetivos}
+\label{chap:objetivos}
+
+\drop{E}{l}  capítulo se centra en exponer cuáles son los objetivos del proyecto, desde el objetivo principal y más general que se pretende que cumpla la aplicación, pasando por los 5 objetivos principales que componen la totalidad del proyecto. Se hará también una breve exposición de cuáles son los entornos de los que se dispone para la realización de la aplicación.
+
+Cada uno de los objetivos planteados para el proyecto supone un incremento funcional que, al ser completado, aportará valor al cliente.
+
+
+\section{Objetivo general}
+
+El objetivo principal de ONCOSUP es el desarrollo de una aplicación web para el Hospital Infantil Universitario Niño Jesús, que permitirá registrar datos sobre pacientes que han sobrevivido a un cáncer infantil. Dicho registro servirá para que los datos puedan ser exportados a una hoja de cálculo, permitiendo así su importación a una herramienta estadística con la que poder realizar estudios sobre los datos registrados y permitirá generar un informe para cada paciente que podrán entregar a su médico de cabecera con el fin de informarles sobre todos los tratamientos y complicaciones que ha conllevado el paso por la enfermedad.
+
+
+\section{Objetivos específicos}
+\label{sec:ObjetivosEspecíficos}
+
+Esta sección expondrá, en orden de prioridad, los cinco objetivos que debe cumplir la aplicación, que de completarse, supondrán la realización íntegra del proyecto.
+
+\subsection{Objetivo 1: Estudio Preconsulta}
+
+El primer objetivo es permitir el registro de todos los datos relacionados con el estudio previo a una consulta, esto es, todos los datos que deben existir antes de que el paciente vaya a la consulta de la doctora. Por tanto, lo principal es permitir el registro del paciente: nombre y apellidos, datos de contacto, de residencia, etcétera. Además, para cada paciente registrado, se debe poder asociar un diagnóstico, un tratamiento e indicar si ha tenido recaídas y la información acerca de éstas. 
+
+Los fármacos y protocolos deben existir previamente en la aplicación, lo que implica que, a pesar de pertenecer a subtareas del objetivo 4, de menor prioridad, será obligatorio desarrollar parte de ese objetivo para que el primero pueda completarse. Por tanto, como se verá en el capítulo \ref{chap:resultados}, algunas de las tareas del cuarto objetivo se planificarán para los primeros sprints.
+
+\subsection{Objetivo 2: Consulta de Seguimiento}
+
+El segundo objetivo es quizá el más amplio de los cinco que se plantean. Se trata de la implementación de todo aquello relacionado con la consulta, permitiendo a la doctora poder registrar, mientras pasa consulta a sus pacientes, todos los cambios y avances de su enfermedad. 
+
+Debido a que la cantidad de información que se debe poder almacenar durante la consulta es enorme, además de la complejidad de algunas de las tareas necesarias para completar el objetivo, el objetivo 2 es el más importante y prácticamente el corazón de la aplicación. Sin acabarlo, no tendría sentido terminar los siguientes, ya que es imprescindible para poder exportar después toda la información.
+
+\subsection{Objetivo 3: Informes}
+
+Todo aquello referente a la creación e impresión de informes. La doctora debe poder acceder a una vista previa del informe que podrá modificar según las necesidades del paciente. Una vez esté conforme con los datos del informe, podrá imprimirlo fácilmente.
+
+\subsection{Objetivo 4: Administración de Usuarios y Administración de Protocolos}
+
+En la administración se pueden diferenciar dos partes, la primera relacionada con la administración de usuarios y auditoría de la aplicación y la segunda con la administración de los datos médicos de la aplicación.
+
+La administración de datos médicos abarca toda la administración de datos sobre protocolos y recomendaciones estándar, que podrán ser seleccionadas, si es necesario, para un paciente y es necesario completarla para terminar el objetivo 1. 
+
+\subsection{Objetivo 5: Exportación de datos}
+
+Incluye las tareas relacionadas con la selección de información y su exportación final. Deberá existir un filtro que permita seleccionar qué datos se desea exportar.
+
+
+\subsection{Objetivos personales}
+
+Se exponen, a continuación, otros objetivos independientes de los específicos del proyecto.
+
+\subsubsection{Cumplir con las competencias de la intensificación}
+
+En el anteproyecto de este documento se justificó qué competencias de la intensificación de Tecnologías de la Información cubriría la participación de la autora en ONCOSUP. Las competencias y su justificación son las que muestra el cuadro \ref{competencias}.
+
+\begin{longtable}[c]{ll}
+\caption{Competencias de Tecnologías de la Información}
+\label{competencias}\\
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn{1}{c}{\cellcolor[HTML]{C0C0C0}Competencia}                                                                                                                                                                                                                                                                                                      & \multicolumn{1}{c}{\cellcolor[HTML]{C0C0C0}Justificación}                                                                                                                                                                                                                                                                                                                                                      \\
+\endfirsthead
+%
+\endhead
+%
+\begin{tabular}[j]{@{}l@{}}Capacidad para comprender el entorno de u-\\na organización y sus necesidades en el ám-\\bito de las tecnologías de la información y\\las comunicaciones.\end{tabular}                                                                                                                                                              & \begin{tabular}[c]{@{}l@{}}Al desarrollarse el TFG en el marco de un\\ FORTE y en las instalaciónes de IECISA,\\ la integración de la autora con la empresa\\ (organización, métodos de trabajo, etcétera)\\será completa. Igualmente, el TFG se llevará\\a cabo utilizando SCRUM con una gran ite-\\racción con el cliente, lo que permitirá cono-\\cer de primera mano sus necesidades reales.\end{tabular} \\
+\rowcolor[HTML]{EFEFEF} 
+\begin{tabular}[c]{@{}l@{}}Capacidad para seleccionar, diseñar, desple-\\gar, integrar, evaluar, construir, gestionar,\\explotar y mantener las tecnologías de hard-\\ware, software y redes, dentro de los pará-\\metros de coste y calidad adecuados.\end{tabular}                                                                                    & \begin{tabular}[c]{@{}l@{}}El proyecto está acotado en cuanto a tiempo\\y coste, estando el alcance bien delineado des-\\de la fase de \emph{Inception}. Por tanto, las variacio-\\nes en éstas u otras variables han de estar bien\\controladas para evitar sobrecostes y retrasos\end{tabular}                                                                                    \\
+\begin{tabular}[c]{@{}l@{}}Capacidad para emplear metodologías cen-\\tradas en el usuario y la organización para\\el desarrollo, evaluación y gestión de apli-\\caciones y sistemas basados en tecnologías\\de la información que aseguren la accesibi-\\lidad, ergonomía y usabilidad de los siste-\\mas.\end{tabular}                                   & \begin{tabular}[c]{@{}l@{}}Se aplicará SCRUM como marco de trabajo,\\que, a través de una serie de roles, eventos, ar-\\tefactos y unas reglas que los relacionan, per-\\mite la gestión de proyectos donde la comuni-\\cación y la cooperación son base fundamental.\end{tabular}                                                                                                                                                                                                                  \\
+\rowcolor[HTML]{EFEFEF} 
+\begin{tabular}[c]{@{}l@{}}Capacidad de identificar, evaluar y gestio-\\nar los riesgos potenciales asociados que\\pudieran presentarse. Capacidad para se-\\leccionar, desplegar, integrar y gestionar\\sistemas de información que satisfagan\\las necesidades de la organización, con\\los criterios de coste y calidad identifica-\\dos.\\ \end{tabular} & \begin{tabular}[c]{@{}l@{}}Al aplicar SCRUM se definen unos riesgos que\\se clasifican según su impacto potencial. Se de-\\finen, además, planes de contingencia para los\\riesgos más significativos, existiendo también\\una política de seguimiento y monitorización\\del impacto medio.\end{tabular}                                                                                                                                                       \\
+\begin{tabular}[c]{@{}l@{}}Capacidad de concebir sistemas, aplicacio-\\nes y servicios basados en tecnologías de\\red, incluyendo: Internet, web, comercio\\ electrónico, multimedia, servicios interac-\\tivos y computación móvil.\end{tabular}                                                                                                            & \begin{tabular}[c]{@{}l@{}}El proyecto se implementará en la forma de u-\\na aplicación web accesible desde la intranet\\del hospital.\end{tabular}                                                                                                                                                                                                                                                                                                                                                                                                                   \\
+\rowcolor[HTML]{EFEFEF} 
+\begin{tabular}[c]{@{}l@{}}Capacidad para comprender, aplicar y\\ gestionar la garantía y seguridad de los\\ sistemas informáticos.\end{tabular}                                                                                                                                                                                                             & \begin{tabular}[c]{@{}l@{}}El proyecto gestionará información médica ab-\\solutamente confidencial, por lo que se estable-\\cerán todos los mecanismos necesarios para\\garantizar la privacidad y la seguridad en el ac-\\ceso a la información.\end{tabular}                                                                                                                                                                                                                                                                                                                                                                                                              
+%
+\end{longtable}
+
+Uniéndose a un equipo de trabajo en IECISA, se pretende que la autora cubra las competencias expuestas más arriba.
+
+\subsubsection{Ampliar conocimientos}
+
+El último objetivo es que la autora tenga mayor conocimiento tanto, de las herramientas nuevas que vaya a usar durante el desarrollo de la aplicación, como el de las que ya conocía antes de entrar en el FORTE. En el capítulo \ref{chap:conclusiones} se expondrán los avances en este área comparando los conocimientos antes de comenzar el proyecto con los conocimientos al acabarlo.

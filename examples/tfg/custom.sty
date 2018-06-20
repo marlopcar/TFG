@@ -1,0 +1,95 @@
+%% -- Escribe aquí tu personalización del estilo
+
+\usepackage{xspace}
+\usepackage{blindtext}
+
+\lstloadlanguages{[ISO]C++, Python, XML}
+\def\esitfg{\emph{esi-tfg}\xspace}
+\def\texcmd#1{\texttt{$\backslash$#1}}
+
+\lstdefinelanguage{HTML5}{
+        language=html,
+        sensitive=true, 
+        alsoletter={<>=-},
+        otherkeywords={
+        % HTML tags
+        <html>, <, /, </, </html>, <, <head>, <title>, </title>, <meta, />, </head>, <body>,
+        <p>, </p>, <script>, </script>, </body>, !, html>, <style>, </style>,
+        },  
+        ndkeywords={
+        % General
+        =,
+        % HTML attributes
+        charset=, id=, width=, height=, color:,
+        % CSS properties
+        border:, transform:, -moz-transform:, transition-duration:, transition-property:, transition-timing-function:
+        }, 
+        morecomment=[s]{<!--}{-->},
+        tag=[s]
+}
+
+\lstset{ 
+basicstyle=\fontsize{9}{9}\selectfont\ttfamily,
+frame=Ltb,
+framerule=0pt,
+aboveskip=0.5cm,
+framextopmargin=3pt,
+framexbottommargin=3pt,
+framexleftmargin=0.3cm,
+framesep=3pt,
+rulesep=.4pt,
+backgroundcolor=\color{gray97},
+rulesepcolor=\color{black},
+numbers=left,
+numbersep=15pt,
+numberstyle=\tiny,
+numberfirstline = false,
+breaklines=true,
+numberblanklines = true,
+tabsize=4
+}
+
+% minimizar fragmentado de listados
+
+\lstdefinestyle{consola}
+{basicstyle=\scriptsize\bf\ttfamily,
+backgroundcolor=\color{gray75},
+}
+
+\lstdefinestyle{C}
+{language=C,
+stringstyle=\color{chromeyellow},
+showstringspaces = false,
+commentstyle=\color{applegreen},
+ndkeywordstyle=\color{applegreen}\bfseries,
+keywordstyle=\color{debianred}\bfseries,
+otherkeywords={
+        % HTML tags
+        @Component, width:, display:, flex-wrap:, justify-content:, margin-bottom:, ngOnInit,this, class, implements,public,private,import,super, entity,LocalDate,Boolean,String,relationship,TextBlob
+        }
+}
+\lstdefinestyle{C2}
+{language=C,
+stringstyle=\color{chromeyellow},
+showstringspaces = false,
+commentstyle=\color{applegreen},
+ndkeywordstyle=\color{applegreen}\bfseries,
+keywordstyle=\color{debianred}\bfseries,
+otherkeywords={
+        % HTML tags
+        @Component, width:, display:, flex-wrap:, justify-content:, margin-bottom:, ngOnInit, class, implements,public, open
+        }
+}
+\lstdefinestyle{HTML5}
+{
+ keywordstyle=\color{denim}\ttfamily,
+    commentstyle=\color{darkgray}\ttfamily,
+    ndkeywordstyle=\color{applegreen}\ttfamily,
+    ndkeywords={class},
+    stringstyle=\color{chromeyellow},
+    language=HTML,
+    otherkeywords={
+        % HTML tags
+       	More, above, below, code,<,</,>,<button,</button,</button>,<span,</span,</span>,<label,</label,</label>,<div,</div,</div>,<select,</select,</select>,<option,</option,</option>,!,<!,<!--,-,--,-->,<a,</a,</a>,between,<br,<br>,<hr,<hr>
+        }
+}

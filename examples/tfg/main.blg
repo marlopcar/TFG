@@ -1,0 +1,106 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: es-alpha.bst
+Database file #1: main.bib
+Warning--entry type for "noticiaRegistro" isn't style-file defined
+--line 1 of file main.bib
+Warning--entry type for "mysqlpago" isn't style-file defined
+--line 10 of file main.bib
+Warning--entry type for "mdbfeatures" isn't style-file defined
+--line 16 of file main.bib
+Warning--entry type for "inceptionDeck" isn't style-file defined
+--line 22 of file main.bib
+Warning--entry type for "ldap" isn't style-file defined
+--line 28 of file main.bib
+Warning--entry type for "lopd" isn't style-file defined
+--line 41 of file main.bib
+Warning--entry type for "notMethodology" isn't style-file defined
+--line 53 of file main.bib
+Warning--entry type for "cloc" isn't style-file defined
+--line 69 of file main.bib
+Warning--entry type for "jhipster" isn't style-file defined
+--line 74 of file main.bib
+Warning--entry type for "websockets" isn't style-file defined
+--line 80 of file main.bib
+Warning--entry type for "jdl" isn't style-file defined
+--line 86 of file main.bib
+Warning--entry type for "jdl-studio" isn't style-file defined
+--line 92 of file main.bib
+Warning--entry type for "liquibase" isn't style-file defined
+--line 98 of file main.bib
+Warning--entry type for "angular" isn't style-file defined
+--line 104 of file main.bib
+Warning--entry type for "mariaDB" isn't style-file defined
+--line 110 of file main.bib
+Warning--entry type for "springBoot" isn't style-file defined
+--line 116 of file main.bib
+Warning--entry type for "springSec" isn't style-file defined
+--line 122 of file main.bib
+Warning--entry type for "tomcat" isn't style-file defined
+--line 128 of file main.bib
+Warning--entry type for "forms" isn't style-file defined
+--line 134 of file main.bib
+Warning--entry type for "tuckman" isn't style-file defined
+--line 158 of file main.bib
+Warning--to sort, need author or key in noticiaRegistro
+Warning--to sort, need author or key in jhipster
+Warning--to sort, need author or key in websockets
+Warning--to sort, need author or key in jdl
+Warning--to sort, need author or key in jdl-studio
+Warning--to sort, need author or key in liquibase
+Warning--to sort, need author or key in angular
+Warning--to sort, need author or key in mariaDB
+Warning--to sort, need author or key in springBoot
+Warning--to sort, need author or key in springSec
+Warning--to sort, need author or key in tomcat
+Warning--to sort, need author or key in notMethodology
+Warning--to sort, need author or key in lopd
+Warning--to sort, need author or key in ldap
+Warning--to sort, need author or key in mysqlpago
+Warning--to sort, need author or key in mdbfeatures
+Warning--to sort, need author or key in cloc
+Warning--to sort, need author or key in forms
+Warning--empty publisher in guiaScrum
+You've used 23 entries,
+            2580 wiz_defined-function locations,
+            654 strings with 6683 characters,
+and the built_in function-call counts, 5451 in all, are:
+= -- 522
+> -- 69
+< -- 4
++ -- 20
+- -- 14
+* -- 309
+:= -- 660
+add.period$ -- 51
+call.type$ -- 23
+change.case$ -- 75
+chr.to.int$ -- 21
+cite$ -- 60
+duplicate$ -- 272
+empty$ -- 660
+format.name$ -- 23
+if$ -- 1257
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 6
+newline$ -- 100
+num.names$ -- 15
+pop$ -- 213
+preamble$ -- 1
+purify$ -- 121
+quote$ -- 0
+skip$ -- 269
+stack$ -- 0
+substring$ -- 183
+swap$ -- 23
+text.length$ -- 4
+text.prefix$ -- 4
+top$ -- 0
+type$ -- 172
+warning$ -- 19
+while$ -- 11
+width$ -- 26
+write$ -- 241
+(There were 39 warnings)

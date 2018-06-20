@@ -1,0 +1,110 @@
+\begin{thebibliography}{mdb18}
+
+\bibitem[ang18]{angular}
+Angular. One framework. Mobile and desktop, último acceso en 2018.
+\newblock url: \url{https://angular.io/}.
+
+\bibitem[clo18]{cloc}
+GitHub, Cloc, último acceso en 2018.
+\newblock url: \url{https://github.com/AlDanial/cloc}.
+
+\bibitem[for18]{forms}
+Formularios de Google, último acceso en 2018.
+\newblock url: \url{http://google.es/intl/es/forms/about/}.
+
+\bibitem[jdl18a]{jdl-studio}
+JDL-Studio, último acceso en 2018.
+\newblock url: \url{https://www.start.jhipster.tech/jdl-studio/}.
+
+\bibitem[jdl18b]{jdl}
+Jhipster Domain Language (JDL), último acceso en 2018.
+\newblock url: \url{https://www.jhipster.tech/jdl/}.
+
+\bibitem[jhi18]{jhipster}
+Greetings, Java Hipster. JHipster, último acceso en 2018.
+\newblock url: \url{https://www.jhipster.tech}.
+
+\bibitem[Kni07]{scrumXP}
+Henrik Kniberg.
+\newblock {\em Scrum and XP from the Trenches}.
+\newblock C4Media, 2007.
+
+\bibitem[lda18]{ldap}
+RFC 2251 - Lightweight Directory Access Protocol (v3), último acceso en 2018.
+\newblock url: \url{http://www.faqs.org/rfcs/rfc2251.html}.
+
+\bibitem[liq18]{liquibase}
+Liquibase official Site, último acceso en 2018.
+\newblock url: \url{https://www.liquibase.org/}.
+
+\bibitem[lop18]{lopd}
+Reglamento de la LOPD, último acceso en 2018.
+\newblock url:
+  \url{https://www.agpd.es/portalwebAGPD/canaldocumentacion/informes_juridicos/reglamento_lopd/index-ides-idphp.php}.
+
+\bibitem[mar18]{mariaDB}
+The MariaDB Foundation – Supporting continuity and open collaboration in the
+  MariaDB ecosystem, último acceso en 2018.
+\newblock url: \url{https://mariadb.org/}.
+
+\bibitem[mdb18]{mdbfeatures}
+MariaDB versus MySQL - Features, último acceso en 2018.
+\newblock url:
+  \url{https://mariadb.com/kb/en/library/mariadb-vs-mysql-features/}.
+
+\bibitem[mys18]{mysqlpago}
+Commercial License for OEMs, ISVs and VARs, último acceso en 2018.
+\newblock url: \url{https://www.mysql.com/about/legal/licensing/oem/}.
+
+\bibitem[not13]{notMethodology}
+SCRUM: Framework not methodology, 2013.
+\newblock url:
+  \url{https://guntherverheyen.com/2013/03/21/scrum-framework-not-methodology/}.
+
+\bibitem[not18]{noticiaRegistro}
+La Fundación Ramñon Areces impulsa el primer registro de supervivientes a
+  largo plazo de cáncer infantil en España, 2018.
+\newblock url:
+  \url{http://www.fundacionareces.es/fundacionareces/portal.do?TR=C&IDR=2024}.
+
+\bibitem[Ras10]{agileSamurai}
+Jonathan Rasmusson.
+\newblock {\em The Agile Samurai}.
+\newblock Pragamatic Bookshelf, 2010.
+
+\bibitem[Ras18]{inceptionDeck}
+Jonathan Rasmusson.
+\newblock The Agile Inception Deck, último acceso en 2018.
+\newblock url:
+  \url{https://agilewarrior.wordpress.com/2010/11/06/the-agile-inception-deck/}.
+
+\bibitem[Smi18]{tuckman}
+Mark~K. Smith.
+\newblock Bruce W. Tuckman – forming, storming norming and performing in
+  groups, último acceso en 2018.
+\newblock url:
+  \url{http://infed.org/mobi/bruce-w-tuckman-forming-storming-norming-and-performing-in-groups/}.
+
+\bibitem[spr18a]{springBoot}
+Spring Boot, último acceso en 2018.
+\newblock url: \url{https://spring.io/projects/spring-boot}.
+
+\bibitem[spr18b]{springSec}
+Spring Security, último acceso en 2018.
+\newblock url: \url{https://projects.spring.io/spring-security/}.
+
+\bibitem[SS17]{guiaScrum}
+Ken Schwaber y Jeff Sutherland.
+\newblock {\em The Scrum Guide}.
+\newblock 2017.
+
+\bibitem[tom18]{tomcat}
+Apache Tomcat, último acceso en 2018.
+\newblock url: \url{http://tomcat.apache.org/}.
+
+\bibitem[web18]{websockets}
+Mozilla Developer Network, WebSockets, último acceso en 2018.
+\newblock url:
+  \url{https://developer.mozilla.org/es/docs/WebSockets-840092-dup}.
+
+\end{thebibliography}

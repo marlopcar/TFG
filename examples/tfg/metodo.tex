@@ -1,0 +1,234 @@
+\chapter{Método de trabajo}
+\label{chap:metodo}
+
+\drop{E}{ste} capítulo se centra en describir el método de trabajo que se seguirá en el desarrollo del proyecto, sus diferentes eventos y artefactos. Se verá también cuál es la planificación y las distintas fases en función del marco de trabajo elegido.
+
+\section{SCRUM}
+\label{scrum}
+
+SCRUM  se trata de un marco de trabajo, o \emph{framework}, ágil,  iterativo e incremental con especial énfasis en el desarrollo software, su principal fin es la gestión del desarrollo del producto. Este marco de trabajo es el que se practica en IECISA. Es común ver que a veces se refiere a SCRUM como una metodología ágil, pero como bien explica Gunther Verheyen en este post\cite{notMethodology}, SCRUM se trata de un marco de trabajo ya que no hay reglas que seguir, sino que se trata de un acercamiento heurístico.
+
+Está pensado para equipos de trabajo y fomenta que se autogestionen y se organicen ellos mismos. Es deseable que los miembros del equipo trabajen en el mismo lugar, pero de no ser posible, se pueden realizar colaboraciones periódicas online. El equipo se reparte el trabajo dividiéndolo en tareas que pueden ser completadas en iteraciones de tiempo limitado a las que se llaman \emph{sprints}.
+
+Además, en el ``SCRUM Team'' o equipo SCRUM, existen diferentes roles según el papel de cada integrante y su función en el equipo.
+
+Se realizan diferentes tipos de reuniones para llevar un control del seguimiento, ya sean diarias o por \emph{sprint}.
+
+
+\section{Roles}
+\label{roles}
+
+SCRUM define tres roles principales que idealmente trabajan juntos para entregar un producto potencialmente usable al final de cada \emph{sprint}.
+
+\subsection{Product Owner}
+\label{ProductOwner}
+
+El \emph{Product Owner} o propietario del producto representa a los \emph{stakeholders} o interesados del producto y al cliente. Es el responsable de asegurar que el equipo aporta valor a la empresa, definiendo correctamente el producto en términos del cliente, historias de usuario, que se añadirán al \emph{Product Backlog} y después priorizará en función de su importancia y dependencias con otras historias. Debe asegurarse de que el \emph{Product Backlog}  es visible, transparente y claro.
+
+Una responsabilidad principal del \emph{Product Owner} es la comunicación con el equipo y \emph{stakeholders}. Su habilidad para transmitir prioridades y empatizar tanto con los miembros del equipo como con los \emph{stakeholders} es vital para que el desarrollo del producto siga el camino correcto. Debe saber dar la información necesaria a cada participante, ya que dar más de la necesaria puede provocar, por ejemplo, la pérdida de interés en el producto de un \emph{stakeholder}.
+
+\subsection{Equipo de desarrollo}
+\label{equipo}
+
+El equipo de desarrollo es el encargado de entregar incrementos potencialmente usables del producto en cada sprint. Suele estar compuesto de entre tres y nueve miembros que llevan a cabo las tareas requeridas en cada incremento del producto.
+
+Los equipos de desarrollo son autoorganizados, aunque esto no implica que no pueda haber interacción con otros miembros de fuera del equipo con el fin de tomar decisiones y llevar la gestión del desarrollo.
+
+\subsection{Scrum Master}
+\label{scrumMaster}
+
+El \emph{Scrum Master} es responsable de facilitar al equipo el cumplir las metas propuestas para el producto durante su proceso de desarrollo. No se trata de un líder de equipo o encargado de gestión del proyecto, sino que su misión es aconsejar e informar al equipo de los problemas o beneficios de sus acciones para que lo tengan en cuenta a la hora de tomar decisiones.
+
+Su principal actividad es asegurarse de que el equipo sigue el marco de trabajo y asegurarse de que se siguen los procesos que define SCRUM, además de animar al equipo a ser proactivos y mejorar continuamente. Algunas de sus tareas son:
+
+\begin{itemize}
+\item Es responsable de ayudar al \emph{Product Owner} a mantener el \emph{Product Backlog} para que el trabajo sea comprendido por el equipo y puedan completarlos de forma rápida y sin malentendidos.
+\item Debe ayudar al equipo a definir el concepto de ``completado'' (\emph{Definition of Done}) para el producto. En esta tarea se puede tener ayuda de algunos \emph{stakeholders} clave en el producto.
+\item Aconsejar al equipo con el fin de entregar un producto con la máxima calidad posible.
+\end{itemize}
+
+
+
+\section{Flujo de trabajo o Workflow}
+\label{workflow}
+
+El marco de trabajo define una serie de eventos y reuniones que sirven para guiar el flujo de trabajo durante el desarrollo del producto.
+
+\subsection{Sprints}
+\label{sprints}
+
+Un sprint es la unidad básica de desarrollo. Es el esfuerzo, hecho por el equipo, en un período de tiempo fijo, normalmente entre dos y cuatro semanas, en el que se completa cierto número de tareas y se entrega un incremento del producto.
+
+Todos los sprint comienzan siempre con un \emph{Sprint Planning}, en el que se define el \emph{Sprint Backlog}, se selecciona el trabajo que se tratará de completar y se establece un objetivo o meta para el sprint.
+
+Al final del sprint se realiza la \emph{Sprint Review} y la sesión de Retrospectiva, dónde se revisa el trabajo completado con el \emph{Product Owner} y los \emph{stakeholders} y se identifican aspectos a mejorar de cara al siguiente sprint.
+
+\subsection{Sprint planning}
+\label{sprintPlanning}
+
+Se trata de la primera reunión que se realiza en cada sprint. En el \emph{Sprint Planning} se acuerda cuál será el objetivo del sprint, que se tendrá en cuenta si fuese necesario en la toma de decisiones durante el sprint.
+
+El equipo propone los elementos del \emph{Product Backlog} que, consideran, podrán completar durante el sprint. Lo elementos del \emph{Sprint Backlog} se dividen en tareas más pequeñas que simplifican el trabajo necesario para completar una historia de usuario. Si se considera que el esfuerzo requerido por una historia es demasiado alto, en esta reunión es cuando se divide en más historias para que el esfuerzo sea equilibrado.
+
+La duración recomendada de esta reunión es de unas dos horas por cada semana del sprint.
+
+\subsection{Daily scrum}
+\label{daily}
+
+La ``daily'' se realiza cada día, una reunión de corta duración que se hace de pie y a la que asisten todos los miembros del equipo. Se realizan de forma puntual, siempre a la misma hora y en el mismo lugar y suelen tener una duración de unos 15 minutos.
+
+De forma general, cada participante debe tratar de responder a tres puntos:
+\begin{itemize}
+\item Qué completó el día anterior que contribuye al objetivo del sprint.
+\item Qué planea completar hoy y qué aporta al objetivo del sprint.
+\item Si identificó algún problema. Esto debe ser registrado por el \emph{Scrum Master} en los riesgos del proyecto y asignado a un encargado para su gestión.
+\end{itemize}
+
+Como resultado de esta reunión, todo el equipo es consciente de en qué está trabajando cada uno y puede además ayudar a algún compañero si lo necesita.
+
+\subsection{Sprint review}
+\label{sprintReview}
+
+En la \emph{Sprint Review} se hace un repaso de cuál ha sido el trabajo completado y el que ha quedado por terminar. Se hace un breve estudio, con gráficas que ofrezcan las herramientas de gestión que tengan disponibles, en el que se compara la velocidad obtenida con la de otros sprint, o se ve una predicción de fecha de entrega. Esta información será tomada en cuenta en el próximo \emph{Sprint Planning} para decidir el trabajo que se planeará.
+
+Se muestra al \emph{Prodct Owner} y \emph{stakeholders} el incremento conseguido en el sprint, y se valora cómo ha sido el desarrollo del sprint.
+
+La duración recomendada de esta reunión para un sprint de dos semanas es de una hora por semana.
+
+\subsection{Retrospectiva}
+\label{retrosopectiva}
+
+Esta sesión consiste en que el equipo haga una reflexión sobre lo ocurrido durante el sprint con el objetivo de identificar tanto cosas buenas y que han agradado al equipo como problemas para la mejora continua del desarrollo. 
+
+Existen distintas dinámicas que el \emph{Scrum Master} propone al equipo para tratar de extraer la mayor cantidad de información posible. Estas actividades suelen tratar de responder a las preguntas: ¿Qué ha ido bien durante el sprint? y ¿qué podríamos mejorar de cara al siguiente?, cuyas respuestas se debaten entre los integrantes del equipo.
+
+La duración recomendada es de una hora por cada semana del sprint.
+
+\subsection{Otros flujos}
+\label{otrosFlujos}
+
+Existen otros eventos o actividades que se pueden realizar de forma habitual, pero que no se consideran clave en SCRUM.
+
+\subsubsection{Inception}
+\label{inception}
+
+La \emph{Inception} se trata de todas las actividades que se realizan antes de comenzar el desarrollo del proyecto, es decir, su descubrimiento, ideación y definición. Es considerada la parte más importante de un proyecto, ya que definir bien qué producto se está buscando y hacer que cada uno de los integrantes del equipo tengan la misma visión de éste es clave para asegurar que el proyecto sale adelante \cite{agileSamurai}.
+
+De manera general, en la \emph{Inception} se busca responder a las siguientes preguntas \cite{inceptionDeck}.
+
+\begin{multicols}{2}
+	\begin{itemize}
+		\item 1. ¿Por qué estamos aquí?.
+    	\item 2. Crea un Elevator Pitch.
+    	\item 3. Diseña una caja del producto o Product Box.
+    	\item 4. Crea una NOT List.
+    	\item 5. Conoce a tus vecinos.
+    	\item 6. Muestra la solución.
+    	\item 7. Pregunta qué nos quita el sueño.
+    	\item 8. ¿Qué tamaño tiene el proyecto?.
+    	\item 9. Sé claro sobre lo que vas a dar.
+    	\item 10. ¿Cuánto tiempo nos va a llevar?.
+	\end{itemize}
+\end{multicols}
+
+Para responder a estas preguntas, en IECISA se llevan a cabo diferentes fases de las que se hablará en la sección \ref{sec:inception}.
+\subsubsection{Refinamiento}
+\label{refinamiento}
+
+Consiste en una revisión del \emph{Product Backlog} en el que junto con el \emph{Product Owner} el equipo se asegura de que las historias de usuario están correctamente definidas y de que el equipo ha comprendido correctamente qué es necesario hacer para completarlas. También se verifica que las historias, hasta el momento, están correctamente priorizadas.
+
+\section{Artefactos}
+\label{artefactos}
+
+A continuación, se describen una serie de artefactos o conceptos comunes en SCRUM.
+
+\subsection{Product Backlog}
+\label{prductBacklog}
+
+Es una lista ordenada de requerimientos, características, errores, que el equipo define; cualquier elemento que sea necesario para el desarrollo correcto del producto.
+
+El \emph{Product Owner} prioriza los elementos del \emph{Producto Backlog} teniendo en cuenta los riesgos, el valor de negocio, las dependencias, el tamaño y la fecha para que que deben ser completados.
+
+Las historias de usuario deben ser visibles por cualquier miembro del equipo y suelen escribirse en un lenguaje que cualquiera puede entender, pero sólo el \emph{Product Owner} puede decidir si se hacen cambios sobre la definición de las historias. 
+
+Mientras que el \emph{Product Owner} se encarga de los elementos que componen el \emph{Product Backlog}, el equipo de desarrollo se encarga de estimar las horas de trabajo o los puntos de historia, de tal forma que se pueda saber cuánto esfuerzo requiere cada historia.
+
+\subsection{Sprint Backlog}
+\label{sprintBacklog}
+
+Se trata de la lista de trabajo que el equipo se ha propuesto completar durante el sprint.
+
+La lista se construye tomando los elementos de la parte más alta del \emph{Product Backlog} hasta que el equipo cree que el trabajo añadido es suficiente para el sprint. En este momento el equipo de desarrollo debe tener en cuenta su desempeño en los sprints pasados para seleccionar una cantidad de trabajo que sean capaces de alcanzar.
+
+Las distintas historias que componen el \emph{Sprint Backlog} no se asignan a ningún componente del equipo en concreto, sino que cada integrante selecciona las que cree que podrá completar. Con esto se trata de promover la autoorganización del equipo y la motivación. Es frecuente usar una tabla para hacer el seguimiento del proceso de desarrollo de las tareas del sprint, como se verá en el capítulo \ref{chap:resultados}, que se divide en tres partes: trabajo por hacer, en proceso y completado.
+
+\subsection{Incremento del producto}
+\label{incremento}
+
+Consiste en la suma de todos los elementos del \emph{Product Backlog} que han sido completados durante un sprint, integrado con el trabajo completado de los anteriores. Un incremento debe ser completado al final de cada sprint.
+
+\subsection{Otros artefactos}
+\label{otrosArtefactos}
+
+Se describen a continuación otros artefactos que también tienen presencia en el marco de trabajo.
+
+\subsubsection{Definition of Done}
+\label{definitionDone}
+
+Son unos criterios de aceptación que determinan cuándo un elemento del \emph{Product Backlog} se puede considerar completado. Estos criterios pueden ser distintos y tener variaciones de unos equipos a otros, pero siempre deben ser consistentes dentro del mismo equipo.
+
+\subsubsection{Velocidad}
+\label{velocidad}
+
+Es una forma de medir el esfuerzo total que un equipo es capaz de hacer en un sprint. El valor se consigue evaluando el trabajo completado en el último sprint. 
+
+También es común hablar de velocidad media o velocidad media de los últimos sprint.
+
+\subsubsection{Pico o Spike}
+\label{spike}
+Período de tiempo usado para informarse sobre un concepto o crear un prototipo simple. En el caso de ONCOSUP, veremos que el Sprint 0 ( sección \ref{sec:sprint0}) se trata de un spike.
+
+\section{Valores de Scrum}
+\label{valores}
+
+SCRUM define cinco valores: compromiso, coraje, foco, franqueza y respeto.
+
+Estos valores se consideran clave para el uso exitoso del marco de trabajo como se puede leer en \emph{La Guia de SCRUM} \cite{guiaScrum} ``El uso exitoso de SCRUM depende de que las personas lleguen a ser más virtuosas en la convivencia con estos cinco valores. Las personas se comprometen de manera individual a alcanzar las metas del Equipo Scrum. Los miembros del Equipo Scrum tienen coraje para hacer bien las cosas y para trabajar en los problemas difíciles. Todos se enfocan en el trabajo del Sprint y en las metas del Equipo Scrum. El Equipo Scrum y sus interesados acuerdan estar abiertos a todo el trabajo y a los desafíos que se les presenten al realizar su trabajo. Los miembros del Equipo Scrum se respetan entre sí para ser personas capaces e independientes''.
+
+\section{Planificación de ONCOSUP}
+\label{planificacionONCOSUP}
+
+A la hora de hacer la estimación del trabajo que supondrá todo un proyecto y poder hacer así su planificación, en IECISA se usan distintas herramientas propias de la empresa.
+
+En primer lugar y de forma general, en casi cualquier proyecto se usa una herramienta que estima los \emph{puntos de historia estándar} o PHE y las horas que llevará completarlos. En esta herramienta se van añadiendo todas las historias de usuario, y para cada una de ellas se rellenan diferentes campos como pueden ser el tipo, la complejidad o la iteración en que se va a completar. Con estos datos, la herramienta proporciona una cantidad de PHE estimados para cada historia de usuario. Tras calcular los PHE, se indica una velocidad, que se basa en la velocidad obtenida en proyectos anteriores de características similares, junto con otros datos como pueden ser si se usan entornos o la metodología del cliente; con esta información y los puntos estimados la herramienta da una estimación de horas necesarias para el proyecto.
+
+Como es la primera vez que en IECISA se usa JHipster, el equipo no está seguro de si esta herramienta proporcionará una estimación fiable. En este tipo de situación se recurre una hoja de cálculo en la que alguien experimentado se encarga de especificar para cada historia el número de horas de trabajo que considera que llevará completarla. Una vez rellenada la hoja con las horas que llevará cada historia, se trata de dividir las horas obtenidas entre las horas requeridas para cada sprint.
+
+Con la primera herramienta, y usando una velocidad de 10 puntos, que es la que suelen llevar proyectos similares en Java, la herramienta estima 216 PHE y más de 3.500 horas de trabajo, cantidad de horas que el equipo no considera fiable. Se decide usar la estimación por experiencia, en la que salen unas 850 horas de trabajo, número mucho más realista y que se puede dividir en los cinco sprints para los que da el presupuesto.
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[h]
+\centering
+\caption{Planificación para ONCOSUP}
+\label{planificacionPHE}
+\begin{tabular}{crr}
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn{1}{l}{\cellcolor[HTML]{C0C0C0}Sprint} & \multicolumn{1}{l}{\cellcolor[HTML]{C0C0C0}Horas estimadas} & \multicolumn{1}{l}{\cellcolor[HTML]{C0C0C0}Puntos de historia (PHE)} \\
+1                                                  & 169                                                         & 42.8                                                                 \\
+\rowcolor[HTML]{EFEFEF} 
+2                                                  & 166                                                         & 43.1                                                                 \\
+3                                                  & 168                                                         & 41.9                                                                 \\
+\rowcolor[HTML]{EFEFEF} 
+4                                                  & 169                                                         & 47.8                                                                 \\
+5                                                  & 169                                                         & 39.9                                                                 \\
+\multicolumn{1}{l}{}                               & \multicolumn{1}{l}{}                                        & \cellcolor[HTML]{EFEFEF}215.6                                       
+\end{tabular}
+\end{table}
+
+
+Con los datos que ha proporcionado la hoja de estimación, el trabajo se reparte en 5 sprints como muestra el cuadro \ref{planificacionONCOSUP}.  El número de horas por sprint excede las 160 que deberían ser, pero para cinco sprints es lo más ajustado que se puede planificar.
+
+Tras esta estimación, y hacer una revisión del presupuesto, se concluye que el proyecto podría tener seis sprints en lugar de cinco, por lo que, teniendo en cuenta la estimación inicial y considerando la opinión del equipo de desarrollo, se decide que lo ideal es que para cada sprint se planifiquen unos 35 puntos y completar el proyecto en seis sprints. Esto permitirá ajustar mejor las 160 horas por sprint, y tener cierto margen si el alcance del proyecto se amplía en el transcurso de los sprints.

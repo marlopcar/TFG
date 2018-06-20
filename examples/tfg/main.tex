@@ -1,0 +1,66 @@
+\documentclass[twoside]{esi-tfg}
+\usepackage{custom}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{longtable}
+\usepackage[spanish]{babel}
+\usepackage{times}
+
+\usepackage{color}
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+\definecolor{debianred}{rgb}{0.84, 0.04, 0.33}
+\definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
+\definecolor{chromeyellow}{rgb}{1.0, 0.65, 0.0}
+\definecolor{denim}{rgb}{0.08, 0.38, 0.74}
+
+\usepackage{listings}
+
+\graphicspath{{figures/}{images/}{/usr/share/arco/figures/}}
+\usepackage{wrapfig}
+
+\input{metadata.tex}
+
+
+\begin{document}
+
+\cover
+\bastardtitle
+\frontpage
+
+\frontmatter
+%\copyrightpage
+\jury
+
+\input{resumen.tex}
+
+\input{thanks.tex}
+\dedication{A mis padres, que cada vez que tropecé, estuvieron ahí para ayudar a levantarme.}
+
+\tableofcontents
+\listoftables
+\listoffigures
+\lstlistoflistings
+
+\mainmatter
+
+\input{intro.tex}
+\input{objetivos.tex}
+\input{antecedentes.tex}
+\input{metodo.tex}
+\input{resultados.tex}
+\input{conclusiones.tex}
+
+\backmatter
+
+\appendix
+\appendixtitle
+\input{anexo1.tex}
+\input{anexo2.tex}
+% {\scriptsize \input{GFDL.tex}}
+
+\bibliography{main}
+\cleardoublepage
+
+\end{document}

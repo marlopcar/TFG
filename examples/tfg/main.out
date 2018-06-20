@@ -1,0 +1,93 @@
+\BOOKMARK [0][-]{chapter*.1}{Resumen}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{Abstract}{}% 2
+\BOOKMARK [0][-]{chapter*.3}{Agradecimientos}{}% 3
+\BOOKMARK [0][-]{chapter*.4}{\315ndice general}{}% 4
+\BOOKMARK [0][-]{chapter*.5}{\315ndice de cuadros}{}% 5
+\BOOKMARK [0][-]{chapter*.6}{\315ndice de figuras}{}% 6
+\BOOKMARK [0][-]{chapter*.7}{\315ndice de listados}{}% 7
+\BOOKMARK [0][-]{chapter.1}{Introducci\363n}{}% 8
+\BOOKMARK [1][-]{section.1.1}{Estructura del documento}{chapter.1}% 9
+\BOOKMARK [0][-]{chapter.2}{Objetivos}{}% 10
+\BOOKMARK [1][-]{section.2.1}{Objetivo general}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.2}{Objetivos espec\355ficos}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.1}{Objetivo 1: Estudio Preconsulta}{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.2}{Objetivo 2: Consulta de Seguimiento}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.3}{Objetivo 3: Informes}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.4}{Objetivo 4: Administraci\363n de Usuarios y Administraci\363n de Protocolos}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.5}{Objetivo 5: Exportaci\363n de datos}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.6}{Objetivos personales}{section.2.2}% 18
+\BOOKMARK [0][-]{chapter.3}{Antecedentes}{}% 19
+\BOOKMARK [1][-]{section.3.1}{Comunicaci\363n en aplicaciones Web}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.2}{JHipster}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.3}{Angular 5}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.4}{Otras tecnolog\355as}{chapter.3}% 23
+\BOOKMARK [0][-]{chapter.4}{M\351todo de trabajo}{}% 24
+\BOOKMARK [1][-]{section.4.1}{SCRUM}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.2}{Roles}{chapter.4}% 26
+\BOOKMARK [2][-]{subsection.4.2.1}{Product Owner}{section.4.2}% 27
+\BOOKMARK [2][-]{subsection.4.2.2}{Equipo de desarrollo}{section.4.2}% 28
+\BOOKMARK [2][-]{subsection.4.2.3}{Scrum Master}{section.4.2}% 29
+\BOOKMARK [1][-]{section.4.3}{Flujo de trabajo o Workflow}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.3.1}{Sprints}{section.4.3}% 31
+\BOOKMARK [2][-]{subsection.4.3.2}{Sprint planning}{section.4.3}% 32
+\BOOKMARK [2][-]{subsection.4.3.3}{Daily scrum}{section.4.3}% 33
+\BOOKMARK [2][-]{subsection.4.3.4}{Sprint review}{section.4.3}% 34
+\BOOKMARK [2][-]{subsection.4.3.5}{Retrospectiva}{section.4.3}% 35
+\BOOKMARK [2][-]{subsection.4.3.6}{Otros flujos}{section.4.3}% 36
+\BOOKMARK [1][-]{section.4.4}{Artefactos}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.4.1}{Product Backlog}{section.4.4}% 38
+\BOOKMARK [2][-]{subsection.4.4.2}{Sprint Backlog}{section.4.4}% 39
+\BOOKMARK [2][-]{subsection.4.4.3}{Incremento del producto}{section.4.4}% 40
+\BOOKMARK [2][-]{subsection.4.4.4}{Otros artefactos}{section.4.4}% 41
+\BOOKMARK [1][-]{section.4.5}{Valores de Scrum}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.6}{Planificaci\363n de ONCOSUP}{chapter.4}% 43
+\BOOKMARK [0][-]{chapter.5}{Resultados}{}% 44
+\BOOKMARK [1][-]{section.5.1}{Inception}{chapter.5}% 45
+\BOOKMARK [2][-]{subsection.5.1.1}{Visi\363n.}{section.5.1}% 46
+\BOOKMARK [2][-]{subsection.5.1.2}{Comunidad de Proyecto.}{section.5.1}% 47
+\BOOKMARK [2][-]{subsection.5.1.3}{Restricciones y riesgos.}{section.5.1}% 48
+\BOOKMARK [2][-]{subsection.5.1.4}{Story Map.}{section.5.1}% 49
+\BOOKMARK [2][-]{subsection.5.1.5}{Volcado en JIRA y Confluence.}{section.5.1}% 50
+\BOOKMARK [1][-]{section.5.2}{Incorporaci\363n a IECISA}{chapter.5}% 51
+\BOOKMARK [1][-]{section.5.3}{Sprint 0}{chapter.5}% 52
+\BOOKMARK [1][-]{section.5.4}{Sprint 1}{chapter.5}% 53
+\BOOKMARK [2][-]{subsection.5.4.1}{Sprint Planning}{section.5.4}% 54
+\BOOKMARK [2][-]{subsection.5.4.2}{Desarrollo del sprint}{section.5.4}% 55
+\BOOKMARK [2][-]{subsection.5.4.3}{Sprint Review}{section.5.4}% 56
+\BOOKMARK [2][-]{subsection.5.4.4}{Retrospectiva}{section.5.4}% 57
+\BOOKMARK [1][-]{section.5.5}{Sprint 2}{chapter.5}% 58
+\BOOKMARK [2][-]{subsection.5.5.1}{Sprint Planning}{section.5.5}% 59
+\BOOKMARK [2][-]{subsection.5.5.2}{Desarrollo del sprint}{section.5.5}% 60
+\BOOKMARK [2][-]{subsection.5.5.3}{Sprint Review}{section.5.5}% 61
+\BOOKMARK [2][-]{subsection.5.5.4}{Retrospectiva}{section.5.5}% 62
+\BOOKMARK [1][-]{section.5.6}{Sprint 3}{chapter.5}% 63
+\BOOKMARK [2][-]{subsection.5.6.1}{Sprint Planning}{section.5.6}% 64
+\BOOKMARK [2][-]{subsection.5.6.2}{Desarrollo del sprint}{section.5.6}% 65
+\BOOKMARK [2][-]{subsection.5.6.3}{Sprint Review}{section.5.6}% 66
+\BOOKMARK [2][-]{subsection.5.6.4}{Retrospectiva}{section.5.6}% 67
+\BOOKMARK [1][-]{section.5.7}{Sprint 4}{chapter.5}% 68
+\BOOKMARK [2][-]{subsection.5.7.1}{Sprint Planning}{section.5.7}% 69
+\BOOKMARK [2][-]{subsection.5.7.2}{Desarrollo del sprint}{section.5.7}% 70
+\BOOKMARK [2][-]{subsection.5.7.3}{Sprint Review}{section.5.7}% 71
+\BOOKMARK [2][-]{subsection.5.7.4}{Retrospectiva}{section.5.7}% 72
+\BOOKMARK [1][-]{section.5.8}{Sprint 5}{chapter.5}% 73
+\BOOKMARK [2][-]{subsection.5.8.1}{Sprint Planning}{section.5.8}% 74
+\BOOKMARK [2][-]{subsection.5.8.2}{Desarrollo del sprint}{section.5.8}% 75
+\BOOKMARK [2][-]{subsection.5.8.3}{Sprint Review}{section.5.8}% 76
+\BOOKMARK [2][-]{subsection.5.8.4}{Retrospectiva}{section.5.8}% 77
+\BOOKMARK [1][-]{section.5.9}{Sprint 6}{chapter.5}% 78
+\BOOKMARK [2][-]{subsection.5.9.1}{Sprint Planning}{section.5.9}% 79
+\BOOKMARK [2][-]{subsection.5.9.2}{Desarrollo del sprint}{section.5.9}% 80
+\BOOKMARK [2][-]{subsection.5.9.3}{Sprint Review}{section.5.9}% 81
+\BOOKMARK [2][-]{subsection.5.9.4}{Retrospectiva}{section.5.9}% 82
+\BOOKMARK [0][-]{chapter.6}{Conclusiones}{}% 83
+\BOOKMARK [1][-]{section.6.1}{SCRUM}{chapter.6}% 84
+\BOOKMARK [1][-]{section.6.2}{JHipster}{chapter.6}% 85
+\BOOKMARK [1][-]{section.6.3}{Objetivos cumplidos}{chapter.6}% 86
+\BOOKMARK [1][-]{section.6.4}{Objetivos personales}{chapter.6}% 87
+\BOOKMARK [1][-]{section.6.5}{Un estudio de valor a\361adido: Valoraci\363n de SCRUM}{chapter.6}% 88
+\BOOKMARK [0][-]{appendix.Alph1}{Estructura de la aplicaci\363n final}{}% 89
+\BOOKMARK [1][-]{section.Alph1.1}{Estructura de entidades de ONCOSUP}{appendix.Alph1}% 90
+\BOOKMARK [1][-]{section.Alph1.2}{JDL de ONCOSUP}{appendix.Alph1}% 91
+\BOOKMARK [0][-]{appendix.Alph2}{Generaci\363n de una aplicaci\363n con JHipster}{}% 92
+\BOOKMARK [0][-]{appendix*.8}{Referencias}{}% 93
